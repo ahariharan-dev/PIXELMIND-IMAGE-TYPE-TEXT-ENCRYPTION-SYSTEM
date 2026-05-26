@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "PixelMind is running! 🔐"
+
 @app.route('/submit', methods=['POST'])
 def submit():
     data = request.json
