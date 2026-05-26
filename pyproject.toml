@@ -1,0 +1,2 @@
+[tool.vercel]
+entrypoint = "sample/sample6.py:app"
