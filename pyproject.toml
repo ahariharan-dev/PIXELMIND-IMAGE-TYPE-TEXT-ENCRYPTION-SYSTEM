@@ -11,8 +11,10 @@ dependencies = [
     "pymongo==4.3.3",
     "python-dotenv",
     "flask",
-    "requests"
+    "requests",
+    "authlib",
+    "werkzeug"
 ]
 
 [tool.vercel]
-entrypoint = "sample/sample6.py:app"
+entrypoint = "api/index.py:app"
