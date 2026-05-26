@@ -1,2 +1,13 @@
+[project]
+name = "pixelmind"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "flask",
+    "pillow",
+    "pymongo",
+    "reportlab"
+]
+
 [tool.vercel]
 entrypoint = "sample/sample6.py:app"
