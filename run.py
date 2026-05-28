@@ -11,14 +11,16 @@ sys.path.insert(0, os.path.join(project_root, 'app'))
 # Set the PYTHONPATH environment variable
 os.environ['PYTHONPATH'] = project_root
 
+# Load .env only in local development
+if os.environ.get('RENDER') is None:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(project_root, '.env'))
+
 # Now import the app
 from app import create_app
 
+app = create_app()
+
 if __name__ == "__main__":
-    # Ensure .env is loaded from the project root
-    from dotenv import load_dotenv
-    load_dotenv(os.path.join(project_root, '.env'))
-    
-    # Create and run the Flask app
-    app = create_app()
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
