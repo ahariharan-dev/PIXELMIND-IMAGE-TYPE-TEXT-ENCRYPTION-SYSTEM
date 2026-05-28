@@ -8,7 +8,7 @@ from authlib.integrations.flask_client import OAuth
 import secrets
 
 # Import other modules
-from app import image_operations 
+from . import image_operations
 from app import pdf_operations 
 from app import zip_operations 
 from app import database 
