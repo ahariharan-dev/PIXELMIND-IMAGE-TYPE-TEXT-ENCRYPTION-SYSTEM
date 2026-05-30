@@ -94,7 +94,7 @@ def encrypt_file(filepath):
     os.makedirs('temp', exist_ok=True)
     os.makedirs('enimg', exist_ok=True)
     
-    from file_operations import text_to_binary, binary_to_ascii
+    from app.file_operations import text_to_binary, binary_to_ascii
     
     print(f"Converting text file to binary: {filepath}")
     text_to_binary(filepath, 'temp/bin_en.txt')
