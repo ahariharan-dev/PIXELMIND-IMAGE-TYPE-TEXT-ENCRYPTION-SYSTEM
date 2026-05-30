@@ -9,10 +9,10 @@ import secrets
 
 # Import other modules
 from app import image_operations
-import pdf_operations
-import zip_operations
-import database
-import chatbot_service
+from app import pdf_operations
+from app import zip_operations
+from app import database
+from app import chatbot_service
 
 # Get the project root directory
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
