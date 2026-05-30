@@ -3,8 +3,7 @@ import requests
 import re
 import random
 from flask import session
-from database import get_user_memory, update_user_memory, extract_user_info, get_conversation_history, add_to_conversation_history
-
+from app.database import get_user_memory, update_user_memory, extract_user_info, get_conversation_history, add_to_conversation_history
 def get_chatbot_response(user_message, conversation_history=None, username=None):
     """
     Get response from AI model via API with permanent memory
