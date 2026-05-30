@@ -118,7 +118,7 @@ def decrypt_file(filepath):
     # Ensure temp directory exists
     os.makedirs('temp', exist_ok=True)
     
-    from file_operations import rgb_binary_de, join_lines_with_space, de_bin_to_text, remove_last_letter
+    from app.file_operations import rgb_binary_de, join_lines_with_space, de_bin_to_text, remove_last_letter
     
     print(f"Converting image to RGB values: {filepath}")
     de_png_to_rgb(filepath, "temp/output_acsii_de.txt")
