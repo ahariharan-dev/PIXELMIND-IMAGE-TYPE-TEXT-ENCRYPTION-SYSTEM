@@ -29,7 +29,7 @@ def get_db():
     except Exception as e:
         print(f"\033[91m[ERROR]\033[0m MongoDB connection failed: {str(e)}")
         print("Make sure MongoDB is running and the connection string is correct.")
-        sys.exit(1)  # Exit the application if database connection fails
+        return None  # Don't crash, just return None
 
 def validate_password(password):
     """
